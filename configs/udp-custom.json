@@ -1,0 +1,32 @@
+{
+    "servers": [
+        {
+            "listen": ":20801",
+            "protocol": "udp",
+            "obfs": "zivpn",
+            "timeout": 300,
+            "max_connections": 1000
+        },
+        {
+            "listen": ":20802",
+            "protocol": "ws",
+            "obfs": "plain",
+            "timeout": 300,
+            "max_connections": 500
+        },
+        {
+            "listen": ":20803",
+            "protocol": "udp",
+            "obfs": "udp-request",
+            "timeout": 300,
+            "max_connections": 500
+        }
+    ],
+    "settings": {
+        "log_level": "info",
+        "log_file": "/var/log/udp-custom.log",
+        "buffer_size": 2097152,
+        "read_buffer": 1048576,
+        "write_buffer": 1048576
+    }
+}
