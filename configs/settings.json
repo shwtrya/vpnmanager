@@ -1,0 +1,33 @@
+{
+    "app_name": "ZiVPN Manager Xtreme",
+    "version": "3.0",
+    "author": "XanmodX",
+    "github": "https://github.com/username/ZiVPN-Manager-Xtreme",
+    
+    "default_settings": {
+        "server_ip": "auto",
+        "default_port": 20801,
+        "default_method": "chacha20-ietf-poly1305",
+        "default_obfs": "zivpn",
+        "default_protocol": "udp",
+        "max_users": 1000,
+        "user_expiry_days": 30,
+        "connection_limit": 3
+    },
+    
+    "paths": {
+        "config_dir": "/etc/zivpn",
+        "user_dir": "/etc/zivpn/users",
+        "backup_dir": "/etc/zivpn/backup",
+        "log_dir": "/var/log/zivpn",
+        "udp_config": "/etc/udp-custom.json"
+    },
+    
+    "features": {
+        "auto_backup": true,
+        "backup_interval": "daily",
+        "auto_update": false,
+        "email_notifications": false,
+        "telegram_bot": false
+    }
+}
