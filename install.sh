@@ -44,7 +44,7 @@ apt install -y \
 # Install UDP Custom
 echo -e "${YELLOW}[3/6] Installing UDP Custom...${NC}"
 wget -O /usr/local/bin/udp-custom \
-    "https://raw.githubusercontent.com/Exe302/Tunnel/main/udp-custom/udp-custom-linux-amd64"
+    "https://raw.githubusercontent.com/Haris131/UDP-Custom/main/udp-custom-linux-amd64"
 chmod +x /usr/local/bin/udp-custom
 
 # Create directories
