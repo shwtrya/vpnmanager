@@ -1,0 +1,27 @@
+#!/bin/bash
+# ZiVPN Manager Updater
+
+echo "Updating ZiVPN Manager..."
+
+# Backup current config
+if [ -d "/etc/zivpn" ]; then
+    tar -czf /tmp/zivpn-backup-$(date +%Y%m%d).tar.gz /etc/zivpn
+    echo "Backup created: /tmp/zivpn-backup-$(date +%Y%m%d).tar.gz"
+fi
+
+# Update main script
+wget -O /usr/local/bin/zivpn \
+    "https://raw.githubusercontent.com/shwtrya/vpnmanager/main/zivpn-manager.sh"
+chmod +x /usr/local/bin/zivpn
+
+# Update UDP Custom
+wget -O /usr/local/bin/udp-custom \
+    "https://raw.githubusercontent.com/Exe302/Tunnel/main/udp-custom/udp-custom-linux-amd64"
+chmod +x /usr/local/bin/udp-custom
+
+# Restart services
+systemctl restart udp-custom
+
+echo ""
+echo -e "\033[1;32mUpdate complete!\033[0m"
+echo "Run 'zivpn' to start the updated manager."
