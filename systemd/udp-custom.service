@@ -1,0 +1,28 @@
+[Unit]
+Description=UDP Custom Server for ZiVPN
+Documentation=https://github.com/username/ZiVPN-Manager-Xtreme
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/etc
+ExecStart=/usr/local/bin/udp-custom -config /etc/udp-custom.json
+Restart=always
+RestartSec=3
+TimeoutStopSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=udp-custom
+
+# Security
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/etc/udp-custom.json /var/log
+
+[Install]
+WantedBy=multi-user.target
