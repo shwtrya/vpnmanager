@@ -1,6 +1,6 @@
 [Unit]
 Description=UDP Custom Server for ZiVPN
-Documentation=https://github.com/username/ZiVPN-Manager-Xtreme
+Documentation=https://github.com/shwtrya/vpnmanager
 After=network.target
 Wants=network.target
 
