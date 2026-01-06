@@ -1,8 +1,8 @@
 {
     "app_name": "ZiVPN Manager Xtreme",
     "version": "3.0",
-    "author": "XanmodX",
-    "github": "https://github.com/username/ZiVPN-Manager-Xtreme",
+    "author": "ShawavaTritya",
+    "github": "https://github.com/shwtrya/vpnmanager",
     
     "default_settings": {
         "server_ip": "auto",
