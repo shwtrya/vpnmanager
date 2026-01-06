@@ -1,0 +1,19 @@
+[Unit]
+Description=ZiVPN Manager Dashboard
+After=network.target udp-custom.service
+Wants=udp-custom.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/etc/zivpn
+ExecStart=/usr/local/bin/zivpn --dashboard
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=zivpn-manager
+
+[Install]
+WantedBy=multi-user.target
